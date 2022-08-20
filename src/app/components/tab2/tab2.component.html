@@ -1,0 +1,20 @@
+<div class="tab-2">
+    <div class="header">
+        <p>Prospector</p>
+    </div>
+    <div class="input">
+        <input style=" width: 240px;height: 35px;" placeholder="Search for a table or a segment"/>
+    </div>
+    <div class="sub-header">
+        <p>SEGMENTS</p><br>
+        <div style="display: flex;margin-top: 3rem;" *ngFor="let test of arr">
+            <div>
+              <span style="margin-right: 4px;">{{ test.emoji }}</span>{{ test.name }}
+            </div>
+        </div>
+    </div>
+    <div (click)="openDialog()" style="position: absolute;display: flex;margin-top: 848px;margin-left: 12px;width: 255px;height: 35px;">
+        <mat-icon style="background: #334BFA; height: 30px;padding-top: 5px;color: #ffffff;">add</mat-icon>
+        <button mat-button class="btn">Add a segment</button>
+    </div>
+</div>

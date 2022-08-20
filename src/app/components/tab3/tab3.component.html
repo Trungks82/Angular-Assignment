@@ -1,0 +1,52 @@
+<div class="tab-3">
+    <div style="display:flex; margin-bottom:0.8rem; justify-content:flex-end">
+        <img src="../../../assets/header-tag1.png" height="20px" style="position: absolute;right: 16.50%;top: 2.90%;bottom: 8.33%;">
+        <img src="../../../assets/header-tag2.png" height="77px" style="position: absolute;right: 0.17%;top: 0.19%;bottom: 92.69%;">
+    </div>
+    <div
+        style="
+        margin-left: 3rem;
+        height: 1px;
+        display: block;
+        margin-top: 5rem;
+        background-color: #848484;
+        width: 92rem;
+        margin-bottom: 1rem;">
+    </div>
+    <div style="margin-left:3.5rem;">
+        <div style="display:flex;">
+            <img src="../../../assets/Vector-head.png" height="22.64" width="21.74" style=" margin-top: 0.28%;">
+            <p class="text">Segment</p>
+        </div>
+        <div style="display: flex;;margin-top:2rem;">
+            <div *ngIf="arr2.length !== 0" style="
+                width: 80px;
+                height: 80px;
+                border-radius: 10px;
+                margin-right: 2rem;
+            ">
+            <div *ngFor="let arr of arr2">
+              <div style="
+                border:1px solid #334BFA;
+                text-align: center;
+                width: 80px;
+                height: 80px;
+                border-radius: 10px;" >
+                <span style="margin-top: 1rem;">{{arr.emoji}}</span>
+              </div>
+              <p style="text-align: center;">{{arr.name}}</p>
+            </div>
+            </div>
+            <button
+                class="btn"
+                matTooltip="Add a table"
+                (click)="openDialog()" >
+                <mat-icon
+                style="
+                background: #FFFFFF;
+                color: #000000;">add</mat-icon>
+            </button>
+        </div>
+
+    </div>
+</div>

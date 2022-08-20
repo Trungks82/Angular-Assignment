@@ -1,0 +1,53 @@
+<div style="display: flex;justify-content: end;">
+  <button mat-button mat-dialog-close style="background:#ffffff; border:none;cursor:pointer;"><mat-icon>clear</mat-icon></button>
+</div>
+<div>
+    <div *ngIf="this.source === 'tab2' ">
+      <p class="header">Add a segment</p>
+    </div>
+    <div *ngIf="this.source !== 'tab2' ">
+      <p class="header">Add a table</p>
+    </div>
+    <div style="margin-top: 2.4rem;">
+      <div>
+       <label class="sub-header" for="name">Name*</label><br>
+       <input class="inpt-name" id="name" [(ngModel)]="name" placeholder="Ex.Computer Science"/>
+      </div>
+      <div style="margin-top: 1rem;">
+          <label class="sub-header" for="icon">Icon</label>
+          <input style="margin-top:0.5rem;" step="border-style:none" id="icon" [(ngModel)]="message" />
+          <button style="width: 22px;height: 27px;background: #ffffff;border:none;" (click)="toggleEmojiPicker()">
+              <mat-icon style="font-size: 17px;margin-left: -10px;">arrow_drop_down</mat-icon>
+          </button><br />
+          <emoji-mart
+              class="emoji-mart"
+              set="twitter"
+              *ngIf="showEmojiPicker"
+              (emojiSelect)="addEmoji($event)"
+              title="Pick your emoji…"
+          ></emoji-mart>
+      </div>
+      <div *ngIf="this.source === 'tab2' " style="margin-top:1rem;">
+        <p class="sub-header">Description</p><br>
+        <textarea style="margin-top: -25px;height:7rem;width:28.8rem;border-radius: 5px;"></textarea>
+      </div>
+    </div>
+    
+    <!-- <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Favorite Color</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="food">
+          <mat-select-trigger>
+            <span class="color-span" [ngStyle]="{ 'background-color': selectedValue }"></span>
+          </mat-select-trigger>
+          <mat-option *ngFor="let color of allColors" [value]="color.value">
+            <span class="color-span" [ngStyle]="{ 'background-color': color }"></span>
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div> -->
+    <div style="margin-top:2rem;">
+      <button mat-button class="btn-sve" (click)="save()">Submit</button>
+      <button mat-button mat-dialog-close class="btn-cls" style="margin-left: 2rem;">Cancel</button>
+    </div>
+</div>

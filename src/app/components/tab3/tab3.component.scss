@@ -1,0 +1,47 @@
+.tab-3{
+    height: 1080px;
+    position: absolute;
+    left: 18.34%;
+    right: 0%;
+    top:0%;
+    bottom: 0.09%;
+    background: #ffffff;
+}
+
+.text{
+    padding-left: 1.8rem;
+    height: 30px;
+    width: 183px;
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 12px;  
+    display: flex;
+    align-items: center;
+    color: #3C3C3C;
+}
+
+.btn{
+    background: #FFFFFF;
+    width: 80px; 
+    height: 80px;
+    padding-top: 5px;
+    border: 2px solid #3C3C3C;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    border: 1px solid #334BFA;
+}
+
+mat-icon:hover{
+    color: #334BFA important;
+}
+
+::ng-deep .mat-tooltip{
+    color: #ffffff;
+    background: #334BFA;
+}
